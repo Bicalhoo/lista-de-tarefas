@@ -4,9 +4,11 @@ Aplicação web desenvolvida como Projeto Integrador de Front-end. Ela permite c
 
 ## Acessar o projeto
 
-Abra o arquivo `index.html` em um navegador. Também é possível acessar a versão publicada:
+- **Site publicado:** [https://bicalhoo.github.io/lista-de-tarefas/](https://bicalhoo.github.io/lista-de-tarefas/)
+- **Vídeo de apresentação:** [Falta o video do youtube]
+- **Repositório:** [https://github.com/Bicalhoo/lista-de-tarefas](https://github.com/Bicalhoo/lista-de-tarefas)
 
-[Abrir Lista de Tarefas](https://github.com/Bicalhoo/lista-de-tarefas.git)
+Também é possível usar o projeto localmente: baixe os arquivos e abra o `index.html` em um navegador.
 
 ## Como usar
 
