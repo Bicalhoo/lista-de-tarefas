@@ -66,4 +66,4 @@ Os scripts são carregados nessa ordem no `index.html`: validação, armazenamen
 
 ## Autor
 
-Felipe Bicalho
+Felipe Bicalho de Carvalho.
