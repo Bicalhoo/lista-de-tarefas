@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Felipe Bicalho">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+
+    <header class="cabecalho">
+      <div class="cabecalho-titulo">
+        <img class="cabecalho-icone" src="img/checklist.png" alt="Ícone de lista com uma tarefa marcada">
+        <h1>Lista de Tarefas</h1>
+      </div>
+      <p>Organize seus estudos e compromissos</p>
+    </header>
+
+    <main class="principal">
+
+      <section class="caixa caixa-formulario">
+        <h2>Nova tarefa</h2>
+
+        <form id="formulario-tarefa" novalidate>
+
+          <div class="campo">
+            <label for="campo-titulo">Título *</label>
+            <input type="text" id="campo-titulo" placeholder="Ex: Estudar JavaScript">
+            <span class="mensagem-erro" id="erro-titulo"></span>
+          </div>
+
+          <div class="campo">
+            <label for="campo-descricao">Descrição</label>
+            <textarea id="campo-descricao" rows="3" placeholder="Detalhes da tarefa (opcional)"></textarea>
+            <span class="contador-letras" id="contador-letras">0/100</span>
+            <span class="mensagem-erro" id="erro-descricao"></span>
+          </div>
+
+          <div class="campo">
+            <label for="campo-categoria">Categoria *</label>
+            <select id="campo-categoria">
+              <option value="">Escolha uma categoria</option>
+              <option value="Estudos">Estudos</option>
+              <option value="Trabalho">Trabalho</option>
+              <option value="Casa">Casa</option>
+              <option value="Pessoal">Pessoal</option>
+            </select>
+            <span class="mensagem-erro" id="erro-categoria"></span>
+          </div>
+
+          <div class="campo">
+            <p class="rotulo">Prioridade *</p>
+            <div class="grupo-opcoes">
+              <label class="opcao"><input type="radio" name="prioridade" value="baixa"> Baixa</label>
+              <label class="opcao"><input type="radio" name="prioridade" value="media"> Média</label>
+              <label class="opcao"><input type="radio" name="prioridade" value="alta"> Alta</label>
+            </div>
+            <span class="mensagem-erro" id="erro-prioridade"></span>
+          </div>
+
+          <div class="campo">
+            <label for="campo-data">Data limite *</label>
+            <input type="date" id="campo-data">
+            <span class="mensagem-erro" id="erro-data"></span>
+          </div>
+
+          <div class="campo campo-checkbox">
+            <label class="opcao"><input type="checkbox" id="campo-importante"> Marcar como importante</label>
+          </div>
+
+          <button type="submit" class="botao botao-principal">Adicionar tarefa</button>
+        </form>
+      </section>
+
+      <section class="caixa caixa-lista">
+        <h2>Minhas tarefas</h2>
+
+        <div class="barra-filtros">
+          <input type="text" id="campo-busca" placeholder="Buscar tarefa...">
+          <select id="filtro-status">
+            <option value="todas">Todas</option>
+            <option value="pendentes">Pendentes</option>
+            <option value="concluidas">Concluídas</option>
+          </select>
+        </div>
+
+        <p class="contador-tarefas" id="contador-tarefas"></p>
+
+        <div id="lista-tarefas"></div>
+
+        <button type="button" class="botao botao-secundario" id="botao-limpar">Limpar concluídas</button>
+      </section>
+
+    </main>
+
+    <footer class="rodape">
+      <p>Projeto Integrador de Front-end - feito com HTML, CSS e JavaScript</p>
+    </footer>
+  </div>
+
+  <script src="js/validar-formulario.js"></script>
+  <script src="js/armazenar-tarefas.js"></script>
+  <script src="js/exibir-tarefas.js"></script>
+  <script src="js/gerenciar-tarefas.js"></script>
+</body>
+</html>
